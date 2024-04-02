@@ -5,7 +5,10 @@ import requests
 from user_agent import generate_user_agent
 import pycountry
 from datetime import datetime
-
+import requests
+import uuid
+from user_agent import generate_user_agent
+from secrets import token_hex
 import os
 try:
     import random
@@ -17,6 +20,13 @@ try:
 except ModuleNotFoundError:
     os.system('pip install user_agent pycountry requests')    
 #from mahos import Hit
+
+cone = token_hex(8).upper()   
+bone = token_hex(8).upper()  
+uid = uuid.uuid4()
+lopp = str(uuid.uuid4())
+Lol = str(uuid.uuid4())
+Gio = str(uuid.uuid4())
 bb = 0
 gg = 0
 GM = 0
@@ -43,7 +53,7 @@ BPurple = '\x1b[1;35m'
 BCyan = '\x1b[1;36m'
 BWhite = '\x1b[1;37m'
 
-print(f'''Available TikTok Account''')
+print(f'''Available TikTok , Hotmail''')
 
 token = input(f' {F}({C}1{F}) {Y} 𝐄𝐧𝐭𝐞𝐫 𝐓𝐨𝐤𝐞𝐧{F}  ' + Z)
 print(X + ' ═════════════════════════════════  ')
@@ -258,9 +268,56 @@ def mahos(email):
 ━━━━━━━━━━━━━━━━━━━━━━━━━''')
 def mazen(email):
     global GM, BM
-    
-    re = requests.get(f"https://gmailll-764d340cbc2b.herokuapp.com/api/gmail/{email}").text
-    if '"status":"Hit",' in re:
+        
+    cookies = {
+    'mkt': 'ar-SA', 'MicrosoftApplicationsTelemetryDeviceId': f'{uid}',
+    'MUID': f'{Lol}',
+    'mkt1': 'ar-YE',
+    'amsc': 'W9SIFWwMGN+lVLl6SXoWchVNp2qClnCuHjeF7QqnZMl/n5lD6GGbuCZYqSNeCIyEtyCYN3ix9oyis7w7wkzr4FWwnrQnXmfKBWr6FSbBP/bQKXYf2uaxg0yKArHa2BUSSlLnEH9qwUfj2ibtbjAZEjfuRU8uqj3qGwYrK0YUPEMgtIUXqrdVrijI22r0pmCfpWP9UtfZ0e1Mz8jY76J81CutcwPlgBvVXu4jCvwPOGrfBXVb20wOfcwjKmvBhUfBibq1R94qCrIuaJ2cx37s1a71J8eNmy0H4qcTktDcT9VwwFQvcIjasVUWF+H9Squj:2:3c',
+    'clrc': '{%2219808%22%3a[%22d7PFy/1V%22%2c%22+VC+x0R6%22%2c%22FutSZdvn%22]}',
+    'fptctx2': 'taBcrIH61PuCVH7eNCyH0LNKRXFdWqLJ6b8ywJyet7VHu2Dd9BXNW%252bWOjjY9QtHGccY75UXlolq7OQ5NwLS8ulzCNvB52TOa2XQDsllTzEALKmePIHAjVXf0frBvoOMHhq7Gd2bZpaUtuFdvIkr98uCmEbU2N8YLSeCowRh3ORr9%252bwe3QzLrxlDijQlX40QVBOU04soGUp5I9t%252by%252bGWh8nmWteV692zgYpY%252bNJcJOWOI1vkYRBG%252bTBre30MUYSRyuI1yulPfgxmoC9raQw7l9evL7ca7dpfnA9rjK243TA5gubEKnf6JioH%252fjHNMbbaoON18n%252bfQ39cwFC5yYtYD3Q%253d%253d',
+    'ai_session': '8c6RMHMQDDRmS3ZN+3LmdZ|1711402756284|1711402756284',
+    'MSFPC': 'GUID=1f0959d32e1a4951957795da73aad529&HASH=1f09&LV=202403&V=4&LU=1710624081495',
+}
+    headers = {
+    'authority': 'signup.live.com',
+    'accept': 'application/json',
+    'accept-language': 'ar-YE,ar;q=0.9,en-YE;q=0.8,en-US;q=0.7,en;q=0.6',
+    'canary': 'tStZYdKJC3VJdgW+hM2SbJM2fj2Dfd7pyuMSWRJLB18MCaCm5dZSKLL/k4sK+r13IpYJp1s3fEarGTfrLpXcbbf0kviYUuVQ5l4I6L28hqCtHJ4h289pv4KFpDlfXnw2dFBXsWG5pATPEPakKvwbFgwJENAONouVfa8qNQbsjU8J2b8bhBhaGYOA6mnNAhRQwySn27hzabmZY6PT6nhHu0MdQYbgPZ4LI2mhoDP6miLyjOnN6p6EYVyV71+/7f9N:2:3c',
+    'content-type': 'application/json',
+    'hpgid': '200639',
+    'origin': 'https://signup.live.com',
+    'referer': f'https://signup.live.com/signup?contextid={cone}&opid={bone}&bk=1711402639&sru=https://login.live.com/login.srf%3fcontextid%3d{cone}%26opid%3d{bone}%26mkt%3dAR-YE%26lc%3d9217%26bk%3d1711402639%26uaid%3d{lopp}&uiflavor=web&lic=1&mkt=AR-YE&lc=9217&uaid={lopp}',
+    'scid': '100118',
+    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'tcxt': '2L2fSRxywqPP8YGo5RdhQWcLjc4ZJO6rG13Z7OKFNYAq/S1rfBxLjRja7oHJXiJGSQqOMo3NC8QpATpm0d0TXVFPf//W6dHuOR3vJSAaloAvAo+RuqHUCG2JlpF8vb9a5rLVkTkh423Ml+/cudrz9rmdhnVSgDMUBxCp+XRLpuMvlGQZBYbyI7wMCaEOS/Qhv5OiI44jFNWrkGLJ3ZjyO/gTB+ITyRSkoEv8PnXUwjlL8xUOD0xLMNLt40FnKiBjWOBq7ABLKaCCyrkBuDU+hcyXnxjVL4vL0H8Q40mvpB2fxOckTDmYP5H2tRf+qAJffc+RFB/TUx31WOHAb2rGnWdE7wt8uTgxsGXM7u6iWCcd6sqIj9/XY4XIa/QRM/PACQE2fhL+WilQ78lRM0Fx4G/EFFfXtBltzYyPBCqUbP3Zpp1iZXKJg/tKu4i5Armz7h3bWwjfvcj6C68bHEbfekGLuOX79a1gFWou7PhwZvK/YViOwsq6rSMBPhAtoA27vmxigDGKN9JFp4GWDm2pTJ/BCYUdNDj3wOm1TWuRhs+oCdnfgrrx5UrxGPKi7GSxE3jBJZ+hU4MbVpvh8CnGittcNDIRiF/7hV989TpbTy4=:2:3',
+    'uaid': lopp,
+    'uiflvr': '1001',
+    'user-agent': generate_user_agent(),
+    'x-ms-apitransport': 'xhr',
+    'x-ms-apiversion': '2',
+}
+     
+    json_data = {
+    'signInName': email,
+    'uaid': lopp,
+    'includeSuggestions': True,
+    'uiflvr': 1001,
+    'scid': 100118,
+    'hpgid': 200639,
+}
+    res = requests.post(
+    f'https://signup.live.com/API/CheckAvailableSigninNames?contextid={cone}&opid={bone}&bk=1711402639&sru=https://login.live.com/login.srf%3fcontextid%3d{cone}%26opid%3d{bone}%26mkt%3dAR-YE%26lc%3d9217%26bk%3d1711402639%26uaid%3d{lopp}&uiflavor=web&lic=1&mkt=AR-YE&lc=9217&uaid={lopp}',
+    cookies=cookies,
+    headers=headers,
+    json=json_data,
+).text
+    if '"isAvailable":true' in res:
 
         GM += 1
         mahos(email)
@@ -330,7 +387,7 @@ def generate_emails():
             while True:
                 np += 1
                 name = rr['user_list'][np]['user_info']['unique_id']
-                email = name + '@gmail.com'
+                email = name + '@hotmail.com'
                 mazen(email)
         except (KeyError, IndexError):
             pass
